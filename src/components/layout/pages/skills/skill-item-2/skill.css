@@ -1,0 +1,48 @@
+.skill-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 115px;
+    height: 170px;
+    margin: 10px 5px;
+    border-radius: 3px;
+    color: whitesmoke;
+    text-shadow: 0 0 3px black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform .3s ;
+    
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.skill-img {
+
+    align-self: flex-end;
+    position: absolute;
+    width: 90%;
+    /* height: 90%; */
+    z-index: 99;
+    transition: all .3s ease-out;
+}
+
+.skill-img:hover {
+    transform: scale(1.2);
+}
+
+.skill-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+}
+
+.skill-text {
+    height: 0%;
+    z-index: 100;
+}
+  /*# sourceMappingURL=skillItem.css.map */

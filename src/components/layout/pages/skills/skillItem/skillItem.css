@@ -1,0 +1,14 @@
+.skill-item {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2d96f7), color-stop(49%, #2d96f6), color-stop(51%, #f3c03a));
+  background: linear-gradient(#2d96f7 0%, #2d96f6 49%, #f3c03a 51% #f3c03a 100%);
+  display: block;
+  color: whitesmoke;
+  text-shadow: 0 0 3px black;
+  font-size: 1.2rem;
+  margin: 5px 5px;
+  padding: 0 10px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 4px var(--test);
+          box-shadow: 0 0 4px var(--test);
+}
+/*# sourceMappingURL=skillItem.css.map */

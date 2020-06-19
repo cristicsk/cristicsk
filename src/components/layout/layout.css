@@ -1,0 +1,147 @@
+:root {
+    --main-bg-color: #1d1d1d;
+    --nav-bar-color: #181818;
+    --cyan: #08fdd8;
+    --text: rgb(228, 228, 228);
+    --red: #ec1d76;
+}
+
+body {
+    background-color: var(--main-bg-color);
+  }
+
+.layout {
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    overflow-y: visible;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* div[class=""] { */
+div.layout div:not(.menu-item):nth-of-type(3) {
+    overflow: hidden;
+    overflow-y: visible;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 480px)  {
+    .layout {
+        flex-direction: column;
+        overflow-y: visible;
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height: 620px) {
+    .layout {
+        /* display: none; */
+        visibility: hidden;
+    }
+    .rotate-phone {
+        display: flex;
+        background-color: #212121;
+    }
+}
+
+.page {
+    position: absolute;
+}
+
+.fade-appear .page,
+.fade-enter .page{
+    opacity: 0;
+    transform: translateX(-150%) scale(0.85);
+}
+
+.fade-enter-active .page{
+    animation: page-in 2.3s forwards;
+}
+
+.fade-exit-active .page {
+    animation: page-out 2.3s forwards;
+}
+
+.fade-exit .page {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+@keyframes page-in {
+    0% {
+        opacity: 0;
+        /* transform: translateX(-150%) scale(0.85); */
+        transform: scale(0.85);
+    }
+    25% {
+        opacity: 0;
+        /* transform: translateX(-150%) scale(0.85); */
+        transform: scale(0.85);
+    }
+    80%{
+        opacity: 1;
+        /* transform: translateX(0%) scale(0.85); */
+        transform: scale(0.85);
+    }
+    100% {
+        opacity: 1;
+        /* transform: translateX(0) scale(1) ; */
+        transform: scale(1) ;
+    }
+}
+
+@keyframes page-out {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(0.85);
+        opacity: 1;
+    }
+    35%{
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.85)
+         /* translateX(150%); */
+    }
+}
+
+/*? Fade effect for Transition Overlay */
+.fade-appear .transition-overlay,
+.fade-enter .transition-overlay {
+    transform: translateX(-100%);
+} 
+
+.fade-enter-active .transition-overlay{
+    animation: transition 2.3s forwards;
+}
+
+@keyframes transition {
+    0% {
+        transform: translateX(-100%);
+    }
+    25% {
+        transform: translateX(0%);
+    }
+    45% {
+        transform: translateX(0%);
+    }
+    75% {
+        transform: translateX(0%);
+    }
+    75% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

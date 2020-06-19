@@ -1,0 +1,58 @@
+.transition-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 40;
+    background-color: rgba(65, 105, 225, 0.219);
+    background-color: var(--main-bg-color);
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    transform: translateX(-100%);
+}
+.transition-content {
+    /* background-color: rgb(109, 64, 64); /* DEBUGG */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 85%;
+    height: 85%;
+    margin-left: 12%;
+    margin-right: 5%;
+}
+.transition-paragraph {
+    font-size: 10vw;
+    color: white;
+}
+
+.transition-progressbar {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: rgb(27, 94, 87);
+}
+
+.transition-progressbar::after {
+    content: '';
+    position: relative;
+    width: 0%;
+    background-color: var(--cyan);
+    animation: loading 2.3s forwards;
+
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}

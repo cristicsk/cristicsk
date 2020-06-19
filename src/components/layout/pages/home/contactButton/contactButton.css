@@ -1,0 +1,105 @@
+.contact-box-align {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+.contact-box {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    align-items: center;
+    /* margin-left: 25%; */
+    margin: auto;
+    --contact-btn-color: var(--cyan);
+    visibility: visible;
+     opacity: 1;
+}
+
+.contact-box.first-render {
+    animation: appear 5s forwards;
+}
+/* #21ecffee - blue deschis cyan
+filter: hue-rotate(30deg); */
+
+.contact-button {
+    position: relative;
+    padding: 10px 30px;
+    margin: 0 15px;;
+    color: var(--contact-btn-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition-delay: .25s;
+    transition: 0.5s;
+}
+
+.contact-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid var(--contact-btn-color);
+    border-left: 2px solid var(--contact-btn-color);
+    transition-delay: .25s;
+    transition: 0.5s;
+}
+.contact-button:hover::before {
+    width: 95%; height: 95%;
+    border-top-color:rgb(64, 224, 208) ;
+    border-left-color:#40e0d0}
+
+.contact-button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid var(--contact-btn-color);
+    border-bottom: 2px solid var(--contact-btn-color);
+    transition-delay: .25s;
+    transition: 0.5s;
+}
+.contact-button:hover::after { 
+    width: 95%; height: 95%;
+    border-right-color:var(--cyan) ;
+    border-bottom-color:var(--cyan) ;
+}
+    
+
+.contact-button:hover {
+    background: var(--contact-btn-color);
+    color: #111;
+    box-shadow: 0 0 40px var(--contact-btn-color);
+    transition-delay: .25s;
+}
+
+@keyframes appear { /*! Found BUG , if cursor not on the screen, will just pop up */
+    0% {visibility: hidden; opacity: 0;}
+    20% {visibility: hidden; opacity: 0;}
+    31% {visibility: visible; opacity: 0;}
+    81% {visibility: visible; opacity: 1;}
+    100% {visibility: visible; opacity: 1;} 
+}
+
+@media only screen and (orientation:landscape) and (max-height: 620px) {
+    .contact-button {
+        transition: 0s;
+        transition-delay: 0s;
+        visibility: hidden;
+    }
+    .contact-button::after {
+        transition: 0s;
+        transition-delay: 0s;
+        visibility: hidden;
+    }
+    .contact-button::before {
+        transition: 0s;
+        transition-delay: 0s;
+        visibility: hidden;
+    }
+}

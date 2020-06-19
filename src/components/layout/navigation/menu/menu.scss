@@ -1,0 +1,52 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.699);
+    transition: transform .25s linear;
+
+}
+
+.menu-item{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(10, 10, 10, 0.904);
+    box-shadow: 0px 0px 3px rgba(128, 128, 128, 0.377);
+}
+
+.menu.closed {
+    transform: translateY(-100%);
+}
+
+.close-button {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+  }
+  .close-button:hover {
+    opacity: 1;
+  }
+  .close-button:before, .close-button:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: rgb(233, 233, 233);
+  }
+  .close-button:before {
+    transform: rotate(45deg);
+  }
+  .close-button:after {
+    transform: rotate(-45deg);
+  }
+  

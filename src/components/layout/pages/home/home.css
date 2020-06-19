@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    margin: 0 0 10% 0;
+    color: white;
+
+}
+.main-text-container {
+    margin-left: 2vw;
+}

@@ -1,0 +1,17 @@
+.social-networks {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    .social-networks{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 760px) and  (orientation: landscape) {
+    .social-networks{ 
+        display: none;
+    }
+}

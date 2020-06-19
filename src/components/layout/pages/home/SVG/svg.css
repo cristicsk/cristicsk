@@ -1,0 +1,100 @@
+.svgbox {
+    padding: 0 20px;
+    height: 150px;
+    width: 950px;
+    transform: translateX(-5%);
+    display: block;
+}
+
+.web-dev-svg {
+    width: 90%;
+    stroke-dashoffset: 0;
+    fill: rgb(226, 226, 226);
+    stroke: #1d1d1d;
+    stroke-width: 1;
+}
+.web-dev-svg.first-render {
+    fill: transparent;
+    stroke: rgb(226, 226, 226);
+    stroke-dasharray: 430;
+    stroke-dashoffset: 430;
+    animation: draw 2.5s 0s forwards ease-in, paintWebDev 2s 2.5s forwards ease;
+}
+
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes paint {
+    to {
+        fill: #07e4c39a;
+    }
+}
+@keyframes paintWebDev {
+    to {
+        fill: rgb(226, 226, 226);
+        stroke: #1d1d1d;
+        stroke-width: 1;
+    }
+}
+@keyframes strokecolor {
+    to {
+        stroke: rgba(17, 17, 17, 0.747);
+        stroke-width: 4px;
+    }
+}
+
+@media (min-width: 1000px) and (max-height: 850px) {
+    .svgbox{
+        width: 700px;
+    }
+}
+
+@media (min-width: 910px) and (max-width: 999px) {
+    .svgbox {
+        width: 850px;
+    }
+}
+
+@media (min-width: 838px) and (max-width: 909px) {
+    .svgbox {
+        width: 770px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 837px) {
+    .svgbox {
+        width: 640px;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 759px) {
+    .svgbox {
+        height: 100px;
+        width: 540px;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 659px) {
+    .svgbox {
+        height: 85px;
+        width: 470px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 589px) {
+    .svgbox {
+        height: 65px;
+        width: 400px;
+    }
+}
+
+@media  (max-width: 480px) {
+    .svgbox {
+        height: 20vw;
+        width: 100vw;
+    }
+}
+

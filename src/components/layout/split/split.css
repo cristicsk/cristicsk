@@ -1,0 +1,43 @@
+.split {
+    position: relative;
+    z-index: 10;
+    margin: 0 15px;
+    height: 100%;
+    min-width: 2px;
+    background-image: linear-gradient( #333 0%, rgba(243, 29, 100, 0.411) 80%, #333 100%);
+    background-position: 0% 0%;
+    background-size: 2.5px 10vh;
+    background-repeat: repeat-y;
+    animation: drip 24s infinite;
+}
+
+
+@keyframes drip {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .split {
+        min-height: 2px;
+        height: 2px;
+        width: 100vw;
+        background-size: 10vw 10vw;
+        margin: 2px 0;
+        background-image: linear-gradient(to right, #333 0%, rgba(253, 42, 112, 0.411) 70%, #333 100%);
+        background-repeat: repeat-x;
+
+    }
+    @keyframes drip {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 100% 0%;
+        }
+    }
+}

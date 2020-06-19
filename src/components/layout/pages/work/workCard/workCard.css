@@ -1,0 +1,20 @@
+.work-card{
+    width: 95%;
+    margin: 1% auto;
+    background-color: rgba(56, 55, 55, 0.623);
+    display: block;
+    text-align: left;
+    /* flex-direction: column; */
+    /* text-align: center; */
+}
+.work-card-content {
+    padding: 15px;
+}
+.work-card-title {
+    color: #ec1d76;
+}
+
+.work-card-body {
+    color: var(--text);
+    font-size: 20px;
+}

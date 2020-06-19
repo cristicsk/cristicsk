@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,WAAW,CAAC;EAIR,UAAU,EAAE,kEAAiE;EAG7E,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,UAAU;EACjB,WAAW,EAAE,aAAa;EAC1B,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,OAAO;EACf,OAAO,EAAE,MAAM;EACf,aAAa,EAAE,IAAI;EAInB,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,WAAW;CAClC",
+    "sources": [
+        "skillItem.scss"
+    ],
+    "names": [],
+    "file": "skillItem.css"
+}
